@@ -26,7 +26,7 @@ X = np.delete(dataset,1,axis=1)
 
 # create the model
 model = Sequential()
-model.add(Dense(10, input_dim=15, activation='relu'))
+model.add(Dense(15, input_dim=15, activation='relu'))
 model.add(Dense(6, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
