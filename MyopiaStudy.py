@@ -21,13 +21,16 @@ dataset = dataset[:,1:17]
 Y = dataset[:,1]
 X = np.delete(dataset,1,axis=1)
 
+#X -= X.mean()
+#X /= X.std()
+
 
 (X_train, X_test, Y_train, Y_test) = train_test_split(X, Y, test_size=0.33, random_state=seed)
 
 # create the model
 model = Sequential()
 model.add(Dense(6, input_dim=15, activation='relu'))
-#model.add(Dense(6, activation='relu'))
+#model.add(Dense(4, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
 # compile the model
